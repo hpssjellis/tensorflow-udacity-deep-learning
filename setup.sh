@@ -1,7 +1,7 @@
 #!/bin/bash  
 
 #  only need to run this script with the command (do not type the #)
-#  bash setup.sh
+#  bash setup-new.sh
 
 
 echo "First checking the Python version"
@@ -48,6 +48,9 @@ echo ". "
 echo "Activate the environemtn use deactivate to get your cursor back"
 source ~/virtual-tf/bin/activate 
 
+printf "\n\nsource ~/virtual-tf/bin/activate "  >> ~/.profile
+printf "\necho 'enter   deactivate    to get out of the virtual enviroment'"  >> ~/.profile
+
 
 echo "--------------------------------------------------------------"
 echo ". "
@@ -56,13 +59,20 @@ echo "Now intall tensorFlow into the enviroment"
 
 pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl
 
+#PYTHONUSERBASE=/home/ubuntu/workspace/tensorflow pip install --user --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl
+#export PYTHONPATH=/home/ubuntu/workspace/tensorflow:$PYTHONPATH
+#export PATH=/home/ubuntu/workspace/tensorflow/bin:$PATH
+
+
+
+
 echo "--------------------------------------------------------------"
 echo ". "
 
 echo "Unfortunately on cloud 9 Pip hides the TensorFlow folder so lets clone it for our use"
 echo "Kind of wasteful but it isn't on our computer anyway"
 
-deactivate
+#deactivate
 
 git clone --recurse-submodules https://github.com/tensorflow/tensorflow
 
@@ -71,25 +81,60 @@ echo "--------------------------------------------------------------"
 echo ". "
 
 
+echo "Installing a few extra packages"
+
+
+
+pip install matplotlib
+
+pip install scikit-learn
+
+pip install git+git://github.com/tensorflow/skflow.git
+
+
+
+echo "------------------------Tensorflow installed--------------------------------------"
+echo "--------------------------------------------------------------"
+echo "--------------------------------------------------------------"
+echo "--------------------------------------------------------------"
+echo "--------------------------------------------------------------"
+echo "--------------------------------------------------------------"
+echo "--------------------------------------------------------------"
+
+echo ". "
+
+#echo "Unfortunately on cloud 9 Pip hides the TensorFlow folder so lets clone it for our use"
+#echo "Kind of wasteful but it isn't on our computer anyway"
+
+#deactivate
+
+git clone --recurse-submodules https://github.com/tensorflow/tensorflow
+
+echo "Make a quick link to udacity files" 
+
+ln -s /home/ubuntu/workspace/tensorflow/tensorflow/examples/udacity /home/ubuntu/workspace/udacityLink
+
+
+
+echo "enter   deactivate    to get out of the virtual enviroment"
+
 
 
 echo "--------------------------------------------------------------"
 echo ". "
 
-echo "--------------------------------------------------------------"
-echo "You can close this window by clicking the close x"
-echo "Right click rocksetta files and select run "
-echo "you can also run them manually by entering the virtual environment"
-echo "source ~/virtual-tf/bin/activate "
-echo "Then bash rocksetta????.sh"
-echo "deactivate    to get out of the virtual enviroment"
-echo "-----------------------------------------"
-echo ""
-echo "If you have made it this far the installation has finished"
-echo "SETUP.SH HAS FINISHED INSTALLING. You can close this terminal window by clicking the x"
-echo "-----------------------------------------"
-echo ""
 
+pip install --upgrade ipython
+pip install --upgrade jupyter
+
+
+
+
+
+#jupyter notebook --ip=0.0.0.0 --port=8080 --no-browser
+jupyter notebook --ip $IP --port $PORT --no-browser
+
+# bash file stays here so no more commands will work
 
 
 
