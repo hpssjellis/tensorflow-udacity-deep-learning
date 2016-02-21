@@ -20,7 +20,12 @@ http://rocksetta.com/tensorflow-teacher/
 
 install onto cloud9 http://c9.io as a custom workspace
 
-Using the url for this repository 
+Using the url for this repository at
+
+https://github.com/hpssjellis/tensorflow-udacity-deep-learning.git
+
+
+
 
 
 
