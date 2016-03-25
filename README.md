@@ -9,7 +9,7 @@ An attempt to setup tensorflow deep learning with udacity online instead of on y
 
 Step by step youtube vide0 at 
 
-????
+https://www.youtube.com/watch?v=ReaxoSIM5XQ
 
 
 and my TensorFlow Teacher webpagge is at
