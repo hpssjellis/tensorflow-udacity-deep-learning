@@ -7,9 +7,20 @@ An attempt to setup tensorflow deep learning with udacity online instead of on y
 
 
 
-Step by step youtube vide0 at 
 
-https://www.youtube.com/watch?v=ReaxoSIM5XQ
+
+
+Installation Video at https://www.youtube.com/watch?v=ReaxoSIM5XQ
+
+
+
+
+
+[![Instructional video at]
+(http://img.youtube.com/vi/ReaxoSIM5XQ/0.jpg)]
+(https://youtu.be/ReaxoSIM5XQ)
+
+
 
 
 and my TensorFlow Teacher webpagge is at
