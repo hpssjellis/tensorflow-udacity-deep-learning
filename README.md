@@ -12,6 +12,8 @@ https://github.com/hpssjellis/forth-tensorflow
 
 
 
+This is the thrid attempt to get Tensorflow working. Presently seems to have a bug in it.
+
 
 
 
