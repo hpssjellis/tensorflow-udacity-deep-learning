@@ -3,6 +3,11 @@ An attempt to setup tensorflow deep learning with udacity online instead of on y
 
 
 
+Newer better but supper long installation ~ 1 hour at
+
+https://github.com/hpssjellis/forth-tensorflow
+
+
 
 
 
